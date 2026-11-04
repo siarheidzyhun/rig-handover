@@ -7,6 +7,7 @@ export type Status = {
   installed: string;
   lastBeat: Beat | null;
   nights: string[];
+  nightCounts?: Record<string, { ok: number; retry: number; fail: number }>;
 };
 
 // Nights on disk = runs/<YYYY-MM-DD>.jsonl, newest first.
